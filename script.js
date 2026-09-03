@@ -27,21 +27,17 @@ botoes.forEach(function (botao) {
 
 const btnTemaEscuro = document.querySelector(".btn-tema-escuro");
 
-if (btnTemaEscuro) {
+btnTemaEscuro.addEventListener("click", mudaTema);
 
-    btnTemaEscuro.addEventListener("click", function () {
-
-        document.body.classList.toggle("tema-escuro");
-
-        if (document.body.classList.contains("tema-escuro")) {
-            btnTemaEscuro.textContent = "☀️";
-        } else {
-            btnTemaEscuro.textContent = "🌙";
-        }
-
-    });
-
+function mudaTema() {
+    const corpoPagina = document.body;
+    if (corpoPagina.classList.contains("tema-escuro")) {
+        corpoPagina.classList.remove("tema-escuro");
+    } else {
+        corpoPagina.classList.add("tema-escuro");
+    }
 }
+
 
 
 const btnVoltarTopo = document.querySelector(".btn-voltar-topo");
