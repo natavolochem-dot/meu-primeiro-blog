@@ -1,13 +1,10 @@
-const botoes = document.querySelectorAll("article button");
 
 botoes.forEach(function (botao) {
     let curtiu = false;
-
     botao.addEventListener("click", botaoClicado);
-
     function botaoClicado() {
+        console.log("fui clicado");
         let texto = botao.querySelector("span");
-
         if (curtiu === false) {
             texto.textContent++;
             curtiu = true;
@@ -24,7 +21,6 @@ btnTemaEscuro.addEventListener("click", mudaTema);
 
 function mudaTema() {
     const corpoPagina = document.body;
-
     if (corpoPagina.classList.contains("tema-escuro")) {
         corpoPagina.classList.remove("tema-escuro");
     } else {
@@ -32,8 +28,4 @@ function mudaTema() {
     }
 }
 
-const btnVoltarTopo = document.querySelector(".btn-voltar-topo");
-
-btnVoltarTopo.addEventListener("click", function () {
-    window.scrollTo(0, 0);
-});
+const btnVoltarTopo = document.querySelector('.btn-voltar-topo');
