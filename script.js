@@ -33,7 +33,6 @@ if (btnTemaEscuro) {
 
         document.body.classList.toggle("tema-escuro");
 
-        // Troca o ícone do botão
         if (document.body.classList.contains("tema-escuro")) {
             btnTemaEscuro.textContent = "☀️";
         } else {
