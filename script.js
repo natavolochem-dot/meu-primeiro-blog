@@ -40,17 +40,8 @@ function mudaTema() {
 
 
 
-const btnVoltarTopo = document.querySelector(".btn-voltar-topo");
+const btnVoltarTopo = document.querySelector('.btn-voltar-topo');
 
-if (btnVoltarTopo) {
-
-    btnVoltarTopo.addEventListener("click", function () {
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
-    });
-
-}
+btnVoltarTopo.addEventListener('click', function() {
+    window.scrollTo(0, 0);
+});
